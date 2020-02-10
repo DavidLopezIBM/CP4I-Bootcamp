@@ -1,0 +1,12 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: hsts-cert
+spec:
+ secretName: hsts-cert
+ issuerRef:
+   name: icp-ca-issuer
+   kind: ClusterIssuer
+ commonName: training-super-long-cert
+ dnsNames:
+  - aspera.cpat4i-3-26eee316cb835fe2220635cc2b1cf976-0001.us-east.containers.appdomain.cloud
