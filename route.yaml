@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: icp-proxy-hsts
+  namespace: kube-system
+spec:
+  host: aspera.YOUR-DNS-NAME
+  port:
+    targetPort: https
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: passthrough
+  to:
+    kind: Service
+    name: nginx-ingress
+    weight: 100
+  wildcardPolicy: None
