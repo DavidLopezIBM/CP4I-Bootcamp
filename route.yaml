@@ -4,7 +4,7 @@ metadata:
   name: icp-proxy-hsts
   namespace: kube-system
 spec:
-  host: aspera.YOUR-DNS-NAME
+  host: aspera.cpat4i-3-26eee316cb835fe2220635cc2b1cf976-0001.us-east.containers.appdomain.cloud
   port:
     targetPort: https
   tls:
